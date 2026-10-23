@@ -1,39 +1,41 @@
 # Lara Games
 
-Landing page moderna para uma loja de games, consoles, acessórios e manutenção especializada. Desenvolvida em TypeScript com Vite, React, Tailwind CSS e Framer Motion, com visual em preto, azul, amarelo e rosa.
+Landing page moderna para uma loja de games, consoles, acessórios e manutenção especializada. O projeto foi desenvolvido em TypeScript com Vite, React, Tailwind CSS e Framer Motion para oferecer uma experiência visual impactante, com foco em conversão e em um visual premium com paleta em preto, azul, amarelo e rosa.
 
 ## Funcionalidades
 
-- Hero section com animações
-- Produtos organizados por categoria
-- Serviços de manutenção e assistência técnica
-- Localização e contato via WhatsApp e Instagram
-- Layout responsivo
+- Hero section com visual impactante e animações
+- Seção de produtos por categoria
+- Área de manutenção e assistência técnica
+- Destaques de estatísticas e localização
+- Botões de contato com WhatsApp e Instagram
+- Layout responsivo e moderno
 
-## Tecnologias
+## Stack
 
-- React e TypeScript
+- React
+- TypeScript
 - Vite
 - Tailwind CSS
 - Framer Motion
 - Lucide React
 
-## Executar localmente
+## Como executar localmente
 
-Requer Node.js e npm instalados.
+Certifique-se de ter o Node.js e o npm instalados.
 
-### Windows PowerShell
+### Windows (PowerShell)
 
-Use `npm.cmd` para evitar o bloqueio do script `npm.ps1` pela política de execução do PowerShell:
+No PowerShell, use `npm.cmd` em vez de `npm`. Isso evita o bloqueio do script `npm.ps1` pela política de execução do Windows, sem precisar alterar as configurações de segurança:
 
 ```powershell
- git clone https://github.com/Caua22908/pixel-power-games.git
- cd pixel-power-games
- npm.cmd install
- npm.cmd run dev
+git clone https://github.com/Caua22908/pixel-power-games.git
+cd pixel-power-games
+npm.cmd install
+npm.cmd run dev
 ```
 
-### macOS, Linux e outros terminais
+### macOS, Linux ou outros terminais
 
 ```bash
 git clone https://github.com/Caua22908/pixel-power-games.git
@@ -42,7 +44,21 @@ npm install
 npm run dev
 ```
 
+A aplicação ficará disponível no endereço padrão do Vite, normalmente em:
+
+```bash
+http://localhost:5173
+```
+
 ## Build de produção
+
+No Windows PowerShell:
+
+```powershell
+npm.cmd run build
+```
+
+No macOS, Linux ou outros terminais:
 
 ```bash
 npm run build
@@ -50,4 +66,12 @@ npm run build
 
 ## Prévia pública
 
-Acompanhe o deploy automático no [GitHub Actions](https://github.com/Caua22908/pixel-power-games/actions). Após a conclusão, o site ficará disponível em <https://caua22908.github.io/pixel-power-games/>.
+O GitHub Actions publica automaticamente o site no GitHub Pages após cada push para `main`:
+
+<https://caua22908.github.io/pixel-power-games/>
+
+Para ativar a publicação, em **Settings > Pages**, selecione **GitHub Actions** como fonte de deploy. O repositório precisa estar público em contas GitHub Free; tornar o repositório público também torna o código-fonte visível.
+
+## Observação
+
+Este projeto foi configurado para servir como uma página comercial para a Lara Games, com foco em loja física na Feira dos Importados do SIA, Banca D56, em Brasília/DF.
