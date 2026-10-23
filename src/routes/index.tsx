@@ -311,7 +311,7 @@ function Shop() {
           variants={{ show: { transition: { staggerChildren: 0.08 } } }}
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {products[cat].map((p) => (
+          {(products[cat] ?? []).map((p) => (
             <motion.div key={p.name} variants={{ hidden: { opacity: 0, y: 40 }, show: { opacity: 1, y: 0 } }}>
               <TiltCard>
                 <div className="mb-6 grid aspect-[4/3] place-items-center rounded-xl bg-secondary grid-bg">
@@ -372,13 +372,13 @@ function Repair() {
               <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 6, ease: "linear" }} className="mb-8 inline-block">
                 <Wrench className="h-16 w-16 text-accent" />
               </motion.div>
-              <h3 className="font-display text-3xl font-black">{services[active].title}</h3>
-              <p className="mt-4 text-lg text-muted-foreground">{services[active].desc}</p>
+              <h3 className="font-display text-3xl font-black">{services[active]!.title}</h3>
+              <p className="mt-4 text-lg text-muted-foreground">{services[active]!.desc}</p>
               <div className="mt-8 flex items-center gap-2 text-sm text-primary">
                 <ShieldCheck className="h-5 w-5" /> Garantia no serviço
               </div>
               <a
-                href={`${WHATS}?text=${encodeURIComponent(`Olá! Quero um orçamento de: ${services[active].title}`)}`}
+                href={`${WHATS}?text=${encodeURIComponent(`Olá! Quero um orçamento de: ${services[active]!.title}`)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-flex rounded-full bg-gradient-brand px-7 py-4 font-bold text-primary-foreground"
