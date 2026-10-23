@@ -10,7 +10,7 @@ import {
 } from "framer-motion";
 import { Gamepad2, Wrench, Headphones, Disc3, MapPin, MessageCircle, Instagram, Zap, ShieldCheck, Star, ArrowRight, Menu, X } from "lucide-react";
 import hero from "@/assets/hero.jpg";
-import logo from "@/assets/lara-logo.jpg.asset.json";
+import logo from "@/assets/logo.png";
 
 const WHATS = "https://wa.me/5561981250789";
 const INSTA = "https://instagram.com/laragames2024";
@@ -105,7 +105,7 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
         <a href="#" className="flex min-w-0 items-center gap-3">
-          <img src={logo.url} alt="Lara Games" className="h-10 w-10 shrink-0 rounded-full" />
+          <img src={logo} alt="Lara Games" className="h-10 w-10 shrink-0 rounded-full" />
           <span className="truncate font-display text-lg font-black tracking-widest">LARA GAMES</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
@@ -226,7 +226,7 @@ function Hero() {
             className="absolute inset-0 rounded-full bg-gradient-brand opacity-40 blur-3xl"
           />
           <motion.img
-            src={logo.url}
+            src={logo}
             alt="Logo Lara Games"
             animate={{ y: [0, -16, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
